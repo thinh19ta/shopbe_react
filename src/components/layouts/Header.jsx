@@ -74,8 +74,8 @@ export default function Header() {
                                     <li>
                                         <NavLink style={navLinkStyle} to={'/shop'}>Shop</NavLink>
                                         <ul class="sub-menu">
-                                            <li><Link to={"/box"}>Box</Link></li>
-                                            <li><Link to={"/gift"}>Gift</Link></li>
+                                            <li><Link to={"/shop/box"}>Box</Link></li>
+                                            <li><Link to={"/shop/gift"}>Gift</Link></li>
                                         </ul>
                                     </li>
                                     <li>

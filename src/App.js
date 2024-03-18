@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import './styles/style.css'
 import Footer from './components/layouts/Footer';
+import ShopBoxOnly from './components/shop/ShopBoxOnly';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/shop' element={<Shop />} />
+          <Route path='/shop/box' element={<ShopBoxOnly />} />
           <Route path='/shop/product/:id' element={<ProductDetail />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/contact' element={<Contact />} />

@@ -4,6 +4,7 @@ import ProductService from "../../services/ProductService"
 import { useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHeart } from "@fortawesome/free-regular-svg-icons"
+import CurrencyFormat from "react-currency-format"
 
 function ListProduct({ categoryId }) {
     const [products, setProducts] = useState([])
@@ -46,7 +47,7 @@ function ListProduct({ categoryId }) {
                                     <div className="product">
                                         <div className="image">
                                             <a href="shop" onClick={(e) => { e.preventDefault(); handleProductDetail(product.id) }} className="img">
-                                                <img src="assets/imgs/product/1.jpg" alt="Product" />
+                                                <img src={`${process.env.PUBLIC_URL}/assets/imgs/product/1.jpg`} alt="Product" />
                                             </a>
                                             <a href="/" className="wishlist"><FontAwesomeIcon style={{ marginTop: "13px" }} icon={faHeart} /></a>
                                             <span className="label">New</span>
@@ -58,7 +59,7 @@ function ListProduct({ categoryId }) {
                                                     <a href="shop.html" className="category">Gift</a>
                                                 </div>
                                                 <div className="price float-right">
-                                                    <span className="new">{product.price}đ</span>
+                                                    <span className="new"><CurrencyFormat value={product.price} displayType={'text'} thousandSeparator={true} suffix={' vnd'} /></span>
                                                 </div>
                                             </div>
                                             <div className="action-button fix">

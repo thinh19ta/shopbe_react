@@ -4,6 +4,7 @@ import ProductService from "../../services/ProductService"
 import Banner from "../layouts/Banner"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope, faHeart, faPrint, faStar } from "@fortawesome/free-solid-svg-icons"
+import CurrencyFormat from "react-currency-format"
 
 export default function ProductDetail() {
     const { id } = useParams()
@@ -54,7 +55,7 @@ export default function ProductDetail() {
                                 <FontAwesomeIcon icon={faStar} />
                             </span>
                             {/* Price */}
-                            <span className="product-price">{product.price} vnd</span>
+                            <span className="product-price"><CurrencyFormat value={product.price} displayType={'text'} thousandSeparator={true} suffix={' vnd'} /></span>
                             {/* Description */}
                             <div className="description">
                                 <p>{product.description}</p>
