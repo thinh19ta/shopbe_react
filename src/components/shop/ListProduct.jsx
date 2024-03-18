@@ -33,6 +33,11 @@ function ListProduct({ categoryId }) {
     return (
         <div className="product-section section pt-120 pb-120">
             <div className="container">
+                <div class="row">
+                    <div class="section-title text-center col mb-60">
+                        <h1>Featured Products</h1>
+                    </div>
+                </div>
                 <div className="row">
                     {
                         products.map(
@@ -40,16 +45,16 @@ function ListProduct({ categoryId }) {
                                 <div className="col-lg-4 col-md-6 col-12  mb-60" key={product.id} >
                                     <div className="product">
                                         <div className="image">
-                                            <a href="product-details.html" className="img">
+                                            <a href="shop" onClick={(e) => { e.preventDefault(); handleProductDetail(product.id) }} className="img">
                                                 <img src="assets/imgs/product/1.jpg" alt="Product" />
                                             </a>
-                                            <a href="#" className="wishlist"><FontAwesomeIcon style={{ marginTop: "13px" }} icon={faHeart} /></a>
+                                            <a href="/" className="wishlist"><FontAwesomeIcon style={{ marginTop: "13px" }} icon={faHeart} /></a>
                                             <span className="label">New</span>
                                         </div>
                                         <div className="content">
                                             <div className="head fix">
                                                 <div className="title-category float-left">
-                                                    <h5 className="title text-danger"><a href="product-details.html">{product.name}</a></h5>
+                                                    <h5 className="title text-danger"><a href="/shop" onClick={(e) => { e.preventDefault(); handleProductDetail(product.id) }}>{product.name}</a></h5>
                                                     <a href="shop.html" className="category">Catalog</a>
                                                 </div>
                                                 <div className="price float-right">
@@ -57,7 +62,7 @@ function ListProduct({ categoryId }) {
                                                 </div>
                                             </div>
                                             <div className="action-button fix">
-                                                <a href="#">add to cart</a>
+                                                <a href="/">add to cart</a>
                                             </div>
                                         </div>
                                     </div>
