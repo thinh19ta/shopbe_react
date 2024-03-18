@@ -31,13 +31,13 @@ function ListProduct({ categoryId }) {
     }
 
     return (
-        <div className="product-section section pt-120 pb-120">
+        <div className="product-section section pt-20 pb-120">
             <div className="container">
-                <div class="row">
-                    <div class="section-title text-center col mb-60">
+                {/* <div class="row">
+                    <div class="section-title text-center col mb-50">
                         <h1>Featured Products</h1>
                     </div>
-                </div>
+                </div> */}
                 <div className="row">
                     {
                         products.map(
@@ -55,7 +55,7 @@ function ListProduct({ categoryId }) {
                                             <div className="head fix">
                                                 <div className="title-category float-left">
                                                     <h5 className="title text-danger"><a href="/shop" onClick={(e) => { e.preventDefault(); handleProductDetail(product.id) }}>{product.name}</a></h5>
-                                                    <a href="shop.html" className="category">Catalog</a>
+                                                    <a href="shop.html" className="category">Gift</a>
                                                 </div>
                                                 <div className="price float-right">
                                                     <span className="new">{product.price}đ</span>

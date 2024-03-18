@@ -1,6 +1,6 @@
 export default function DoubleBanner() {
     return (
-        <div className="banner-section section pt-120">
+        <div className="banner-section section pt-40">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-12 mb-30">
